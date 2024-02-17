@@ -1,0 +1,16 @@
+{
+  "name": "com.fuzzyvoid.bullethelpers",
+  "version": "1.2.3",
+  "displayName": "Bullet Helpers",
+  "description": "Some methods to help with 2D bullet spawning and velocity",
+  "unity": "2021.2",
+  "keywords": [
+    "bullets",
+    "bullethelper",
+    "projectile"
+  ],
+  "author": {
+    "name": "fuzzyvoid",
+    "email": "fuzzyvoidcollective@gmail,com"
+  }
+}
