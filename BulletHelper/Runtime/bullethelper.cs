@@ -83,5 +83,16 @@ namespace FuzzyVoid.BulletHelper
 
 			return new Vector2(x, y);
 		}
+
+		public static float GetDeflectedAngle(float angle, Vector2 contactPoint, Vector2 spawnOrigin)
+		{
+			Vector3 currentDir = AngleToDirection(angle);
+
+			Vector2 point = spawnOrigin - contactPoint;
+			Vector2 newDir = 1.0f * (-2 * Vector3.Dot(currentDir, Vector3.Normalize(point.normalized)) * Vector3.Normalize(point.normalized) + currentDir);
+
+			float newAngle = Mathf.Atan2(newDir.y, newDir.x) * Mathf.Rad2Deg;
+			return newAngle;
+		}
 	}
 }
