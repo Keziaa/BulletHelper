@@ -94,5 +94,12 @@ namespace FuzzyVoid.BulletHelper
 			float newAngle = Mathf.Atan2(newDir.y, newDir.x) * Mathf.Rad2Deg;
 			return newAngle;
 		}
+
+		public static float ClampAngle(float angle, float min, float max)
+		{
+			float start = (min + max) * 0.5f - 180;
+			float floor = Mathf.FloorToInt((angle - start) / 360) * 360;
+			return Mathf.Clamp(angle, min + floor, max + floor);
+		}
 	}
 }
